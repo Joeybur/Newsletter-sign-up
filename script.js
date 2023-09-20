@@ -5,6 +5,7 @@ const succesContainer = document.querySelector(".card-container-succes");
 const form = document.querySelector(".form");
 const errorMsg = document.querySelector(".err");
 const emailInput = document.getElementById("email-input");
+const confirmationEmail = document.getElementById("confirmation-email");
 const emailPattern = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$/;
 
 submitBtn.addEventListener("click", (e) => {
@@ -18,6 +19,7 @@ submitBtn.addEventListener("click", (e) => {
   } else {
     startContainer.classList.add("hide");
     succesContainer.classList.remove("hide");
+    confirmationEmail.textContent = email;
   }
 });
 
